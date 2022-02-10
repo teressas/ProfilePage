@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Short+Stack&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+    background-color: rgb(253, 247, 247);
+    color: rgb(58, 58, 58);
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Short Stack', cursive; */
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin: 50px 10px 0;
+}
+
+p{
+    margin: 0px;
+    font-size: 20px;
+}
+
+a {
+    color: rgb(174, 0, 255);
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.dark a {
+    color: rgb(241, 170, 238);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+}
+
+.switch {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(39, 38, 38);
+    position: relative;
+}
+
+.flicker {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    /* will use parent position(switch) as reference */
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 0.3s;
+    box-shadow: 
+        inset 4px 4px 4px rgb(255, 255, 255),
+        inset -4px -4px 4px rgb(195 193 198 / 90%);
+}
+
+.dark {
+    background-color: rgb(57, 57, 57);
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px; 
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 45px; 
+}
+
+.dark .flicker {
+    transform: translateX(40px);
+    transition: 0.3s;
+}
+
+.dark > * {
+    color: rgb(255, 255, 255);
+}
+
+.main {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.main-text {
+    padding: 30px;
+    margin-bottom: 100px; 
+}
+
+.square {
+    width: 98%;
+    margin: 1%;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.dark .square {
+    background-color: rgb(85, 85, 85);
+}
+
+#spotify {
+    background-image: url("assets/css-square.png");
+    background-size: cover;
+}
+
+.sub-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    position: relative;
+    width: 50%;
+    height: 350px;
+    display: block;
+    margin-bottom: 100px;
+}
+
+.cube {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-25deg) skew(25deg);
+}
+
+.cube:before {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 100%;
+    transform: skewY(-45deg);
+    left: -20px;
+    bottom: -10px;
+}
+
+.cube:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 21px;
+    transform: skewX(-45deg);
+    left: -10px;
+    bottom: -20px;
+}
+
+#html {
+    left: 100px;
+    bottom: 80px;
+    background-image: url("assets/html-square.png");
+    background-size: cover;
+    background-color: rgb(175, 107, 243);
+    box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
+}
+
+#html:before {
+    background-color: rgb(189, 138, 240);
+}
+
+#html:after {
+    background-color: rgb(205, 188, 223);
+}
+
+#css {
+    left: 220px;
+    bottom: 240px;
+    background-image: url("assets/css-square.png");
+    background-size: cover;
+    background-color: rgb(228, 59, 157);
+    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+}
+
+#css:before {
+    background-color: rgb(224, 125, 203);
+}
+
+#css:after {
+    background-color: rgb(235, 199, 236);
+}
+
+#javascript {
+    left: 450px;
+    bottom: 200px;
+    background-image: url("assets/javascript-square.png");
+    background-size: cover;
+    background-color: rgb(46, 238, 62);
+    box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
+}
+
+#javascript:before {
+    background-color: rgb(158, 228, 152);
+}
+
+#javascript:after {
+    background-color: rgb(189, 238, 189);
+}
+
+#react {
+    left: 350px;
+    bottom: 40px;
+    background-image: url("assets/react-square.png");
+    background-size: cover;
+    background-color: rgb(122, 205, 243);
+    box-shadow: -80px 80px 20px rgb(50 50 50/ 15%);
+}
+
+#react:before {
+    background-color: rgb(148, 189, 209);
+}
+
+#react:after {
+    background-color: rgb(182, 230, 241);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 100px 30px;
+    background-color: rgb(139, 137, 137);
+}
+
+.dark footer {
+    background-color: rgb(48, 46, 46);
+}
+
+/* remain at the bottom */
+@media only screen and (min-width: 970px) {
+    .main-text {
+        width: 50%;
+    }
+
+    .square {
+        width: 48%;
+        margin: 1%;
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .hero-image {
+        display: none;
+    }
+}
